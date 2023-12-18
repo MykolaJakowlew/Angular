@@ -1,0 +1,12 @@
+<div class="todos">
+  <ul class="todo-list">
+    @for (item of todos; track item.id) {
+    <app-todo-item [text]="item.text" [date]="item.date">
+    </app-todo-item>
+    }
+
+  </ul>
+  @if(!todos.length) {
+  <div class="not-found">Not found todos</div>
+  }
+</div>
